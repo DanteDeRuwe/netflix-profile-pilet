@@ -1,5 +1,5 @@
 import { PiletApi } from 'piral-tryout';
-import './style.scss';
+import './scss/style.scss';
 import ProfileExtension from './components/ProfileExtension';
 import ProfilePage from './components/ProfilePage';
 

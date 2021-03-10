@@ -5,7 +5,10 @@
   "keywords": [
     "pilet"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "js-yaml-loader": "^1.2.2",
+    "use-persisted-state": "^0.3.3"
+  },
   "devDependencies": {
     "@dbeining/react-atom": "4.1.13",
     "@libre/atom": "1.3.3",

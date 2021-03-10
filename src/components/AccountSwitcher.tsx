@@ -1,18 +1,28 @@
 import * as React from 'react';
-import DummyProfile from './DummyProfile';
+import { User } from '../models/types';
+import Account from './Account';
+import usersdata from '../data/users.yml';
+import createPersistedState from 'use-persisted-state';
 
-const AccountSwitcher: React.FC = () => (
-  <div className="AccountSwitcher">
-    <div className="wrapper">
-      <h1>Who's Watching?</h1>
-      <div className="profile-wrap">
-        <DummyProfile number={1} name="John"></DummyProfile>
-        <DummyProfile number={2} name="Jenny"></DummyProfile>
-        <DummyProfile number={3} name="Jack"></DummyProfile>
-        <DummyProfile number={4} name="Jane"></DummyProfile>
+const users = usersdata as User[];
+
+const useUserState = createPersistedState('user');
+
+const AccountSwitcher: React.FC = () => {
+  const [user, setUser] = useUserState<User>(null);
+
+  const profiles = users.map(user => (
+    <Account key={user.userId} user={user} onClickName={() => setUser(user)}></Account>
+  ));
+
+  return (
+    <div className="AccountSwitcher">
+      <div className="wrapper">
+        <h1>Who's Watching?</h1>
+        <div className="profile-wrap">{profiles}</div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default AccountSwitcher;
