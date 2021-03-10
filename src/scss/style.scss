@@ -54,10 +54,8 @@
 
 .ProfilePage {
   margin: 10rem 5rem 0 5rem;
-}
-
-.AccountSwitcher {
   color: #6d6d6d;
+  text-align: center;
 
   h1 {
     color: #fff;
@@ -116,3 +114,17 @@
 }
 
 @import 'avatars';
+
+.LogoutButton {
+  padding: 5px 15px;
+  color: #6d6d6d;
+  font-size: 17px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: 1px solid #6d6d6d;
+  transition: all 300ms ease;
+  &:hover {
+    color: white;
+    border: 1px solid white;
+  }
+}
