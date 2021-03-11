@@ -11,7 +11,7 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="ProfilePage">
       <AccountSwitcher />
-      {user ? <LogoutButton logoutAction={() => setUser(null)} /> : <></>}
+      {user && <LogoutButton logoutAction={() => setUser(null)} />}
     </div>
   );
 };

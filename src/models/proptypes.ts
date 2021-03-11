@@ -5,7 +5,7 @@ export interface ProfileExtensionProps {
     imgUrl: string;
 }
 
-export interface ProfileProps {
+export interface AccountProps {
     user: User;
     onClickName: Function;
 }
