@@ -10,13 +10,13 @@ const Account: React.FC<AccountProps> = ({ user, onClickName }) => {
 
   return (
     <div className="profile">
-      <a href="#" onClick={() => onClickName()}>
+      <Link to="/" onClick={() => onClickName()}>
         {profilepic || avatar}
-      </a>
+      </Link>
       <div className="profile-name">
-        <a href="#" onClick={() => onClickName()}>
+        <Link to="/" onClick={() => onClickName()}>
           {user.name}
-        </a>
+        </Link>
       </div>
     </div>
   );
