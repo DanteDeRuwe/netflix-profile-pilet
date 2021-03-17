@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PiletApi } from 'piral-tryout';
+import { PiletApi } from 'netflix-piral';
 import ProfileExtension from './components/ProfileExtension';
 import './scss/style.scss';
 
